@@ -13,12 +13,13 @@ Modern user authentication uses the [OAuth 2.0](https://oauth.net/2) protocol wh
 ![Octocat](./oauth2.png)
 
 #### Login
-The flow starts the user typing in their credentials onto the **client** application(think any typcial login page). These credentials are then send to an **identity provider** for verification. Here are some popular modern identity providers:
+The flow starts with the user typing in their credentials onto the **client** application(the key unlocking the door to the house). These credentials are then send to an **identity provider** for verification. Here are some popular modern identity providers:
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. [KeyCloak](https://www.keycloak.org) <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. [Okta](https://www.okta.com) <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. [Frontegg](https://frontegg.com) <br />
-#### Tokens
-Upon successful login, the authorization server response back with an access token and ID token. These tokens are used for very distinct purposes. The ID token includes basic encoded information about the user(first name, username, email, etc.). The access token on the other hand is how later on in the flow the identity provider can confim that the user is in fact who they say they are.
+Upon successful login, the authorization server response back with an access token and ID token. These tokens are in [JWT](https://jwt.io/introduction) format so we can be sure they can't be tampered with.
+#### Authorization
+Now that the user's credentials have been correctly, you need to ensure that the user making requests for data is who they say they are _and_ have the correct permissions to do so. To do this you need to ask the identity provider to validate the access token. If valid, the ID token, which contains the user's custom permissions, can then be used to verify that they are indeed allowed to perform the action they're requesting to do. If they are, the request continues on and the user is shown the appropriate data.
 ## The code
 
