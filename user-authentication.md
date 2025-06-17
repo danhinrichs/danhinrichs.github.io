@@ -86,7 +86,7 @@ function App() {
   if (isAuthenticated) {
     return (
       <div>
-        Welcome, you are authenticated
+        Welcome, you are authenticated!
       </div>
     );
   } else {
