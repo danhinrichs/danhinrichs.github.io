@@ -77,16 +77,16 @@ function App() {
   const { isLoading, isAuthenticated, error, user, loginWithRedirect, logout } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
   if (error) {
-    return <div>Oops... {error.message}</div>;
+    return <div>Oops... {error.message}</div>
   }
 
   if (isAuthenticated) {
     return (
       <div>
-        Welcome, you are authenticated!
+        Welcome, you are authenticated
       </div>
     );
   } else {
@@ -104,5 +104,5 @@ logout({ logoutParams: { returnTo: window.location.origin }})
 ```
 
 ##### 2. Back-end authentication
- 
+
 
