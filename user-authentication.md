@@ -9,7 +9,7 @@ Like many things in technology, a real life example is often the best way of exp
 
 Modern user authentication uses the [OAuth 2.0](https://oauth.net/2) protocol which maps to this analogy quite nicely:
 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Correct key in order to enter house -> Log in to application using username and password  <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Validate painter's identity and proof of occupation -> Authorization of user and gheir permissions upon request for data<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Validate painter's identity and proof of occupation -> Authorization of user and their permissions upon request for data<br /><br />
 ![Octocat](./oauth2.png)
 
 #### Authentication
@@ -20,6 +20,11 @@ The flow starts with the user typing in their credentials into the **client** ap
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. [Frontegg](https://frontegg.com) <br />
 Upon successful login, the authorization server response back with an access token and ID token. These tokens are in [JWT](https://jwt.io/introduction) format so we can be sure they can't be tampered with.
 #### Authorization
-Now that the user's credentials have been correctly, you need to ensure that the user making requests for data is who they say they are _and_ have the correct permissions to do so. To do this you need to ask the identity provider to validate the access token. If valid, the ID token, which contains the user's custom permissions, can then be used to verify that they are indeed allowed to perform the action they're requesting to do. If they are, the request continues on and the user is shown the appropriate data.
+Now that the user's credentials have been correctly, you need to ensure that the user making requests for data is who they say they are _and_ have the correct permissions to do so. To do this you need to ask the identity provider to validate the access token. If valid, the access token, which contains the user's custom permissions, can then be used to verify that they are indeed allowed to perform the action they're requesting to do. If they are, the request continues on and the user is shown the appropriate data.
+```
+Error messages:
+401(unauthorized) = need to authenticate or login failed
+403(forbidden) = insufficient permissions to perform requested action
+```
 ## The code
 
