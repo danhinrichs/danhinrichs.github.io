@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-Test
+
+
 ## [Understanding User Authentication](./user-authentication.md)
 
 User authentication is a cornerstone to understanding web development.
