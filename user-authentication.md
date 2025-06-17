@@ -12,8 +12,8 @@ Modern user authentication uses the [OAuth 2.0](https://oauth.net/2) protocol wh
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Validate painter's identity and proof of occupation -> Authorization of user and gheir permissions upon request for data<br /><br />
 ![Octocat](./oauth2.png)
 
-#### Login
-The flow starts with the user typing in their credentials onto the **client** application(the key unlocking the door to the house). These credentials are then send to an **identity provider** for verification. Here are some popular modern identity providers:
+#### Authentication
+The flow starts with the user typing in their credentials into the **client** application(the key unlocking the door to the house). These credentials are then send to an **identity provider** for verification. Here are some popular modern identity providers:
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. [KeyCloak](https://www.keycloak.org) <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. [Okta](https://www.okta.com) <br />
