@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-Topics
+Click on any of the topics below for more information.
 
 ## [Understanding User Authentication](./user-authentication.md)
 
