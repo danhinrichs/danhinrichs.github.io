@@ -46,7 +46,7 @@ This information can be obtained through your identity provider's admin portal.
 #### Client application
 The are _many_ front-end libraries that provide easy to use OAuth setup but we'll be focusing on [Auth0t](https://www.npmjs.com/package/@auth0/auth0-react) as it's a very popular and flexible library for authenticating against almost any OIDC service. 
 ##### 1. Setting up client application
-```js
+```jsx
 //index.jsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
@@ -68,7 +68,7 @@ root.render(
 ```
 This code ensures all of the pages within your application have what they need to properly authenticate the user.
 Within your App.js file, you should have the following
-```js
+```jsx
 //App.jsx
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -77,10 +77,10 @@ function App() {
   const { isLoading, isAuthenticated, error, user, loginWithRedirect, logout } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
   if (error) {
-    return <div>Oops... {error.message}</div>
+    return <div>Oops... {error.message}</div>;
   }
 
   if (isAuthenticated) {
