@@ -30,7 +30,7 @@ Error messages:
 
 ## The code
 Hopefully the above introduction laid out three distinct parts of a successful authentication flow<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. The identity provide <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. The identity provider <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. The client application <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. The back-end API 
 <br />

@@ -1,5 +1,5 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme
-title: [Software Engineering Made Simple]
-description: ["In the age of AI, cloud, and big data, the principles of good software engineering are more important than ever"]
+title: Software Engineering Made Simple
+description: In the age of AI, cloud, and big data, the principles of good software engineering are more important than ever
