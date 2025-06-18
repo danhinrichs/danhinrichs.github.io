@@ -44,7 +44,7 @@ From a developer's standpoint the only things you need to know about in terms of
 This information can be obtained through your identity provider's admin portal.
 
 #### Client application
-The are _many_ front-end libraries that provide easy to use OAuth setup but we'll be focusing on [Auth0t](https://www.npmjs.com/package/@auth0/auth0-react) as it's a very popular and flexible library for authenticating against almost any OIDC service. 
+The are _many_ front-end libraries that provide easy to use OAuth setup but we'll be focusing on [Auth0](https://www.npmjs.com/package/@auth0/auth0-react) as it's a very popular and flexible library for authenticating against almost any OIDC service. 
 ##### 1. Setting up client application
 ```jsx
 //index.jsx
