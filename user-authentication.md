@@ -104,5 +104,58 @@ logout({ logoutParams: { returnTo: window.location.origin }})
 ```
 
 ##### 2. Back-end authentication
+The core of back-end authentication comes from the user's access token. By design, this token is immutable, verifiable, and unique per user session. To start you must retireve the token from your auth provider and send it to your back-end service via a bearer token in the request headers.
+```jsx
+import { useAuth0 } from "@auth0/auth0-react";
 
+const Page = () => {
+  const { getAccessTokenSilently } = useAuth0();
 
+  async function getData(){
+    try {
+        const accessToken = await getAccessTokenSilently();
+        const response = await fetch('https://api.example.com/data', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        throw error;
+    }
+  }
+};
+
+export default Page;
+```
+When the request enters your back-end service, you must first verify that the provided access token is valid. To do this we use the [JWT library](https://www.npmjs.com/package/jsonwebtoken).
+```js
+function validateAccessToken(request){
+    try {
+        const authHeader = request.headers.authorization;
+        const accessToken = authHeader.split(' ')[1];
+        const decodedAccessToken = jwt.verify(accessToken, 'SECRET_VALUE_FOR_DECRYPTION');
+        return true;
+    } catch(err) {
+        throw "401 error";
+    }
+}
+```
+Additionally, you can validate the audience that the token contains to make sure the user has the correct permissions to perform the corresponding action the request is going to do.
+```js
+function validateAccessToken(request){
+    try {
+        const authHeader = request.headers.authorization;
+        const accessToken = authHeader.split(' ')[1];
+        const decodedAccessToken = jwt.verify(accessToken, 'SECRET_VALUE_FOR_DECRYPTION');
+        if(decodedAccessToken?.aud==="EXPECTED_VALUE"){
+            return true;
+        } else{
+            throw "403 error";
+        }
+    } catch(err) {
+        throw "401 error";
+    }
+}
+```
