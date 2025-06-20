@@ -116,7 +116,7 @@ const Page = () => {
         const accessToken = await getAccessTokenSilently();
         const response = await fetch('https://api.example.com/data', {
           headers: {
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${accessToken}`
           }
         });
         const result = await response.json();
