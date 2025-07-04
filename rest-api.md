@@ -26,10 +26,10 @@ With an ever growing list of programming languages and infrastrucutre types, the
 | Method | Definition           | Example                |
 |:-------|:---------------------|:-----------------------|
 | GET    | For retriving data                    | GET /api/user/user123                                             |
-| POST   | For creating data                     | POST /api/user <br> {userId: "user123", firstName: "Bill"}         |
-| PUT    | For updating an enitre data element   | PUT /api/user/user123 <br> {userId: "user124", firstName: "Bob" } |
+| POST   | For creating data                     | POST /api/user <br/> {userId: "user123", firstName: "Bill"}         |
+| PUT    | For updating an enitre data element   | PUT /api/user/user123 <br/> {userId: "user124", firstName: "Bob" } |
 | DELETE | For deleting data                     | DELETE /api/user/user123                                         |
-| PATCH  |   For updating only certain data elements  | PUT /api/user/user123 <br> {firstName: "Bob"}                 |
+| PATCH  |   For updating only certain data elements  | PUT /api/user/user123 <br/> {firstName: "Bob"}                 |
 
 
 #### Methods exaplained 
