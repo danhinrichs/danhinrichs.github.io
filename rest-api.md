@@ -15,10 +15,10 @@ With an ever growing list of programming languages and infrastrucutre types, the
 
 ## How to speak REST
 ### Definitions
-> **Method** - action being done to request <br/>
+> **Method** - action being done to request<br/>
 > **Route** - everything after the forward slash in the URL <br/>
-> **Request body** - where the content of the data lives(in JSON format)
-> **URL paramaters** - dynamic value in the URL route(ex. /users/user123, the url parameter is the user ID user123) <br/>
+> **Request body** - where the content of the data lives(in JSON format)<br/>
+> **URL paramaters** - dynamic value in the URL route(ex. /users/user123, the url parameter is the user ID user123)<br/>
 > **Query parameters** - way of applying query when retrieving data(ex. /users/?limit=100)
 
 
