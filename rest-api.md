@@ -20,6 +20,8 @@ With an ever growing list of programming languages and infrastrucutre types, the
 > Request body - where the content of the data lives(in JSON format)
 > URL paramaters - dynamic value in the URL route(ex. /users/user123, the url parameter is the user ID user123) <br/>
 > Query parameters - way of applying query when retrieving data(ex. /users/?limit=100)
+
+
 ### Methods
 | Method | Definition           | Example |
 |:-------|:---------------------|:--------|
