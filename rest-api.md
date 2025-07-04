@@ -34,7 +34,11 @@ With an ever growing list of programming languages and infrastrucutre types, the
 | PATCH  | For updating only certain data elements | PATCH /api/users/user123<br/>{firstName: "Robert"}                 |
 
 
-#### Methods exaplained 
+### Architecture features
+* REST APIs are stateless. This means that they don't keep track of any data themselves. API calls should return the same data regardless of what client calls them or when. 
+* A client-server design which allows the client and the server to run independently and perform only the actions it needs to before reaching out to the other(ex. the server only deals with user authentication and saving and retrieving data from the database(s) while the client only has to "paint" the data on the screen and give the user the ability to update their data).
+* Data is represented in [JSON](https://www.json.org/json-en.html) format.
+
 
 ## The code 
 Back in 2022, the [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) method was introducted into NodeJS as a built-in method, overtaking 3rd party libraries such as Axios and SuperAgent as the most popular way to make HTTP requests. 
