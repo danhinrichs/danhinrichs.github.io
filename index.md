@@ -11,6 +11,10 @@ User authentication is a cornerstone to understanding web development.
 
 Understanding the REST protocol is essential to grapsing the ever more data-driven internet. 
 
+## [<u>Code Commits</u>](./code-commits.md)
+
+Following certain Git commit styles makes for easier pull-request reviews and rollbacks, saving lots of time in the long run.
+
 ```
 "Simplicity is the ultimate sophistication"
 ```
