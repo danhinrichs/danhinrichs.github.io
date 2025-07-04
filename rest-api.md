@@ -35,7 +35,7 @@ Back in 2022, the [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fet
 
 To make an HTTP request do the following
 ```ts
-async function fetchUser(requestBody: any): Promise<any> {
+async function callApi(requestBody: any): Promise<any> {
     const response = await fetch("URL", {
         method: "GET|POST|PUT|DELETE|PATCH|etc.",
         headers: {},
@@ -44,8 +44,8 @@ async function fetchUser(requestBody: any): Promise<any> {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     } else{
-        const userData: any = await response.json();
-        return userData;
+        const responseData: any = await response.json();
+        return responseData;
     }
 }
 ```
