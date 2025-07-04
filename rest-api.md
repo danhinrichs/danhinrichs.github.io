@@ -23,12 +23,6 @@ With an ever growing list of programming languages and infrastrucutre types, the
 
 
 ### Methods
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
 
 
 | Method | Definition           | Example                |
