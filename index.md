@@ -15,6 +15,7 @@ Understanding the REST protocol is essential to grapsing the ever more data-driv
 
 Following certain Git commit styles makes for easier pull-request reviews and rollbacks, saving lots of time in the long run.
 
+
 ```
 "Simplicity is the ultimate sophistication"
 ```
